@@ -20,6 +20,7 @@ Make use of free API to generate random texts on click of a button as well as be
 - custom headers?
 - CORS?
 - fetch API parameters?
+- Destructuring
 
 ## Thought process
 
@@ -27,6 +28,5 @@ Make use of free API to generate random texts on click of a button as well as be
 - Get jokes from API
 - Display joke onto webpage
 - Tweet joke
-- Destructuring
 
 ## Need to refactor
