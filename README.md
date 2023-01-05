@@ -16,11 +16,17 @@ Make use of free API to generate random texts on click of a button as well as be
 
 ## Things I learned
 
+- headers API
+- custom headers?
+- CORS?
+- fetch API parameters?
+
 ## Thought process
 
 - The user clicks a "Humor me!" button
 - Get jokes from API
 - Display joke onto webpage
 - Tweet joke
+- Destructuring
 
 ## Need to refactor
