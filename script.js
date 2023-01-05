@@ -2,8 +2,6 @@ const jokeText = document.getElementById('joke');
 const twitterBtn = document.getElementById('twitter');
 const jokeBtn = document.getElementById('new-joke');
 
-const jokesArray = [];
-
 async function getJoke() {
 	const jokeURL = 'https://icanhazdadjoke.com';
 
@@ -12,16 +10,17 @@ async function getJoke() {
 			Accept: 'application/json',
 		},
 	});
-	const joke = await response.json();
-	console.log(joke);
-	// try {
-	// 	const response = await fetch(jokeURL);
-	// 	const data = await response.json();
-
-	// 	console.log(data);
-	// } catch (error) {
-	// 	console.log(error);
-	// }
+	const data = await response.json();
+	// console.log(data);
+	return data;
 }
 
-getJoke();
+async function displayJoke() {
+	const { joke } = await getJoke();
+	// console.log(joke);
+	jokeText.textContent = joke;
+}
+
+jokeBtn.addEventListener('click', displayJoke);
+
+displayJoke();
